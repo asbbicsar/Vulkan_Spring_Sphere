@@ -179,8 +179,8 @@ static std::vector<SphereNode> generateSphereNodes(uint32_t width, uint32_t heig
                 //node.isFixed = (y == height - 1) ? 1.0f : 0.0f; // 필요시 특정 조건 추가
                 //node.isFixed = (y == 15 && x == 7 && z == 7) ? 1.0f : 0.0f;
                 node.isFixed = (y == 15 &&
-                                5 < x && x < 9 &&
-                                5 < z && z < 9) ? 1.0f : 0.0f;
+                                2 < x && x < 13 &&
+                                2 < z && z < 13) ? 1.0f : 0.0f;
                 nodes.push_back(node);
             }
         }

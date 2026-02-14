@@ -31,9 +31,9 @@ layout(local_size_x = 16, local_size_y = 16, local_size_z = 1) in;
 
 // 시뮬레이션 상수
 const float springRestLength = 0.1;
-const float springStiffness = 150.0;
-const float damping = 0.95;
-const vec3 gravity = vec3(0.0, -1.2, 0.0);
+const float springStiffness = 2500.0;
+const float damping = 0.98;
+const vec3 gravity = vec3(0.0, -9.8, 0.0);
 const int WIDTH = 16;
 const int HEIGHT = 16;
 const int DEPTH = 16;
@@ -62,11 +62,11 @@ void main() {
     vec3 prevPos = current.prevPos.xyz;
     vec3 originPos = current.originPos.xyz;
 
-    //vec3 wind = vec3(0.0, 0.0, sin(u_Time * frequency) * windStrength);
+    vec3 wind = vec3(0.0, 0.0, sin(u_Time * frequency) * windStrength);
     //vec3 wind = vec3(0.0, 0.0, windStrength);
 
-    //vec3 force = gravity + wind; // 중력 적용
-    vec3 force = gravity; // 중력 적용
+    vec3 force = gravity + wind; // 중력 적용
+    //vec3 force = gravity; // 중력 적용
 
 // --- 3차원 스프링 힘 계산 (인접한 26개 노드 탐색) ---
 for (int i = -1; i <= 1; i++) {
