@@ -1,7 +1,0 @@
-<Solution>
-  <Configurations>
-    <Platform Name="x64" />
-    <Platform Name="x86" />
-  </Configurations>
-  <Project Path="Vulkan_Spring_Sphere/Vulkan_Spring_Sphere.vcxproj" Id="765113d5-2169-4181-97d0-4c8df1672125" />
-</Solution>
