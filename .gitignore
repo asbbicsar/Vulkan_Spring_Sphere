@@ -11,6 +11,7 @@ CMakeUserPresets.json
 *.vcxproj
 *.filters
 *.user
+*.bat
 
 ### Vulkan ###
 # Compiled Shader files
