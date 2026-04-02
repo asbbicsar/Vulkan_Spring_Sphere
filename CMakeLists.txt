@@ -98,14 +98,3 @@ add_custom_command(
         "$<TARGET_FILE_DIR:${PROJECT_NAME}>/shaders"
     COMMENT "Copying shader files to the execution folder..."
 )
-
-# -------------------------------------------------------------------
-# 6. copy models folder to exe file
-# -------------------------------------------------------------------
-add_custom_command(
-    TARGET ${PROJECT_NAME} POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E copy_directory
-        "${CMAKE_CURRENT_SOURCE_DIR}/models"
-        "$<TARGET_FILE_DIR:${PROJECT_NAME}>/models"
-    COMMENT "Copying model files to the execution folder..."
-)
